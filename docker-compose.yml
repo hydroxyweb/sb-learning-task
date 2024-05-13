@@ -26,4 +26,4 @@ services:
       MYSQL_PASSWORD: laravel_password
       MYSQL_ROOT_PASSWORD: root_password
     volumes:
-      - ./mysql-data:/opt/homebrew/Cellar/mysql/8.3.0_1
+      - ./mysql-data:/var/lib/mysql
