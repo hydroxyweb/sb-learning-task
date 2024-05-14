@@ -1,0 +1,27 @@
+@use '../../functions/getters/getColor' as func;
+
+$social-button-size: 28px;
+
+.social__buttons
+{
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	align-content: center;
+	align-items: center;
+	margin-left: 4rem;
+	
+	i {
+		color: func.get-color(white);
+		background-color: func.get-color(primary);
+		font-size: 20px;
+		width: $social-button-size;
+		height: $social-button-size;
+		padding: 5px;
+		border-radius: 50%;
+	}
+
+	&-title {
+		color: func.get-color(primary);
+	}
+}
