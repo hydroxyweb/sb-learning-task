@@ -1,0 +1,52 @@
+@use '../functions/getters/getColor' as func;
+
+.navigation {
+	position: absolute;
+	right: 0;
+
+	width: 18rem;
+	height: 100vh;
+
+	background-color: func.get-color(white);
+
+	transition: transform 0.7s cubic-bezier(0.77,0.2,0.05,1.0);
+
+	transform: translateX(110%);
+	z-index: 0;
+
+	&::before {
+		background-color: func.get-color(black, 0.5) !important;
+		content: "";
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		transform: translateX(-100%);
+		z-index: -3;
+		transition: all .25s ease;
+		width: 110vw;
+		height: 100vh;
+		display: none;
+		opacity: 0;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+
+		height: 100%;
+		padding: 0;
+
+		list-style: none;
+	}
+
+	&__item-title {
+		color: func.get-color(primary);
+		font-size: 1.2rem;
+		font-weight: 400;
+		text-decoration: none;
+		padding-left: 30px;
+	}
+}

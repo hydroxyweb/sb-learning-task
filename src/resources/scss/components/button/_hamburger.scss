@@ -1,0 +1,76 @@
+@use '../../functions/getters/getColor' as func;
+
+$hamburger-color: func.get-color(primary);
+$hamburger-width: 3.3rem;
+$hamburger-bar-height: 0.4rem;
+
+.hamburger {
+	&--collapse {
+		display: none;
+
+		&:checked ~ .hamburger--menu {
+			background: transparent;
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+
+		&:checked ~ .navigation {
+			transform: translateX(10%);
+
+			&::before {
+				opacity: 100;
+				display: flex;
+			}
+		}
+	}
+
+	&--label {
+		position: absolute;
+		right: 1rem;
+		height: $hamburger-width;
+		width: $hamburger-width;
+
+		display: block;
+		z-index: 5;
+		cursor: pointer;
+		transition: all .5s ease-in-out;
+	}
+
+	&--menu {
+		width: 10px;
+		height: 2px;
+		background-color: func.get-color(primary);
+		border-radius: 5px;
+		z-index: 10;
+		transition: all .5s ease;
+		rotate: 180deg;
+		position: absolute;
+		top: 1.5rem;
+		right: 0;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 2px;
+			background: func.get-color(primary);
+			border-radius: 5px;
+			transition: all .5s ease;
+		}
+
+		&::before {
+			transform: translateY(-6px);
+		}
+
+		&::after {
+			transform: translateY(6px);
+		}
+	}
+}
