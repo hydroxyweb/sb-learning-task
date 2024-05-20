@@ -1,5 +1,4 @@
-@use '../../functions/getters/getColor' as func;
-
+@use '../../functions/getters' as func;
 $hamburger-color: func.get-color(primary);
 $hamburger-width: 3.3rem;
 $hamburger-bar-height: 0.4rem;
@@ -27,6 +26,11 @@ $hamburger-bar-height: 0.4rem;
 				opacity: 100;
 				display: flex;
 			}
+
+			@media screen and (min-width: func.get-breakpoint(lg)) {
+				// megakadályozzuk, hogy klikkre előugorjon a backdrop
+				transform: unset;
+			}
 		}
 	}
 
@@ -40,6 +44,14 @@ $hamburger-bar-height: 0.4rem;
 		z-index: 5;
 		cursor: pointer;
 		transition: all .5s ease-in-out;
+
+		@media screen and (min-width: func.get-breakpoint(lg)) {
+			position: unset;
+			right: unset;
+			width: 100%;
+			height: auto;
+			cursor: unset;
+		}
 	}
 
 	&--menu {
@@ -53,6 +65,10 @@ $hamburger-bar-height: 0.4rem;
 		position: absolute;
 		top: 1.5rem;
 		right: 0;
+
+		@media screen and (min-width: func.get-breakpoint(lg)) {
+			display: none;
+		}
 
 		&::before,
 		&::after {

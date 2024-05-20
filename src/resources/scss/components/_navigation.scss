@@ -1,4 +1,4 @@
-@use '../functions/getters/getColor' as func;
+@use '../functions/getters' as func;
 @use './button/social-buttons';
 
 .navigation {
@@ -14,6 +14,40 @@
 
 	transform: translateX(110%);
 	z-index: 0;
+
+	@media screen and (min-width: func.get-breakpoint(lg)) {
+		left: 30%;
+	}
+
+	@media screen and (min-width: func.get-breakpoint(xl)) {
+		left: 50%;
+	}
+
+	@media screen and (min-width: func.get-breakpoint(lg)) {
+		transform: unset;
+		width: 100%;
+		height: unset;
+		position: relative;
+		background-color: transparent;
+
+		a, a:hover {
+			color: func.get-color(white);
+		}
+
+		.social {
+			&__buttons {
+				display: none;
+
+				&-title {
+					display: none;
+				}
+			}
+		}
+
+		.header__logo {
+			display: none;
+		}
+	}
 
 	&::before {
 		background-color: func.get-color(black, 0.5) !important;
@@ -39,6 +73,10 @@
 		padding: 0;
 
 		list-style: none;
+
+		@media screen and (min-width: func.get-breakpoint(lg)) {
+			flex-direction: row;
+		}
 	}
 
 	&__item-title {
@@ -47,5 +85,11 @@
 		font-weight: 400;
 		text-decoration: none;
 		padding-left: 30px;
+	}
+
+	&__bottom {
+		padding-left: 30px;
+		position: absolute;
+		bottom: 30px;
 	}
 }

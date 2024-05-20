@@ -1,0 +1,12 @@
+@use '../../config/breakpoints' as conf;
+@use '../common/getValue' as func;
+
+/**
+ * It's a special getter for breakpoints,that get the value from map.
+ *
+ * @param {Value} $breakpoint - breakpoint  value.
+ */
+
+@function get-breakpoint($breakpoint) {
+	@return func.get-value(conf.$breakpoints, $breakpoint);
+}

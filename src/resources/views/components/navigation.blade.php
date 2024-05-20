@@ -7,7 +7,7 @@
         </li>
     @endforeach
     </ul>
-    <div class="">
+    <div class="navigation__bottom">
         <p class="social__buttons-title">follow us</p>
         <x-button.social-buttons/>
     </div>

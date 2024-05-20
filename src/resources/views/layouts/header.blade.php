@@ -3,4 +3,5 @@
         <span class="header__logo">Acenda</span>
         <x-button.hamburger/>
     </div>
+    <div class="header__background"></div>
 </header>

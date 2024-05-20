@@ -1,4 +1,4 @@
-@use '../../functions/getters/getColor' as func;
+@use '../../functions/getters' as func;
 
 $social-button-size: 28px;
 
@@ -9,8 +9,7 @@ $social-button-size: 28px;
 	gap: 0.5rem;
 	align-content: center;
 	align-items: center;
-	margin-left: 4rem;
-	
+
 	i {
 		color: func.get-color(white);
 		background-color: func.get-color(primary);
@@ -23,5 +22,6 @@ $social-button-size: 28px;
 
 	&-title {
 		color: func.get-color(primary);
+		font-weight: 600;
 	}
 }
