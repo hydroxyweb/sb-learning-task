@@ -59,10 +59,10 @@
 		right: 0;
 		transform: translateX(-100%);
 		z-index: -3;
-		transition: all .25s ease;
+		transition: all .5s ease;
 		width: 110vw;
 		height: 100vh;
-		display: none;
+		visibility: hidden;
 		opacity: 0;
 	}
 

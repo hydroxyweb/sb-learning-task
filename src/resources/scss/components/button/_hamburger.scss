@@ -25,6 +25,7 @@ $hamburger-bar-height: 0.4rem;
 			&::before {
 				opacity: 100;
 				display: flex;
+				visibility: visible;
 			}
 
 			@media screen and (min-width: func.get-breakpoint(lg)) {
