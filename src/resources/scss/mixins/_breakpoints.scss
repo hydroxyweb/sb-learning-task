@@ -1,0 +1,72 @@
+@use '../config/breakpoints' as conf;
+
+/*
+	Get the next breakpoints from the breakpoints config list
+ */
+@function breakpoint-next($name, $breakpoint-names: map_keys(conf.$breakpoints)) {
+	$index: index($breakpoint-names, $name);
+	@warn "index `#{$index}`";
+	@if $index != null and $index < length($breakpoint-names) {
+		@return nth($breakpoint-names, $index + 1);
+	}
+	@else {
+		@return null;
+	}
+}
+
+/*
+ Get the breakpoint minimum width
+ */
+@function breakpoint-min($name, $breakpoint-names: conf.$breakpoints) {
+	$min: map-get($breakpoint-names, $name);
+	@warn "min `#{$min}` `#{$name}`";
+	@if($min != 0){
+		@return $min
+	}
+	@else {
+		@return null;
+	}
+}
+
+/*
+ Get the breakpoint maximum width, which is the next breakpoint minus 0.01
+ */
+@function breakpoint-max($name) {
+	$next: breakpoint-next($name);
+	@warn "next `#{$next}`";
+	@if($next) {
+		@return breakpoint-min($next) - 1;
+	}
+	@else {
+		@return null;
+	}
+}
+
+/*
+ Include a media query with the minimum breakpoint width
+ */
+@mixin media-breakpoint-up($name) {
+	$min: breakpoint-min($name);
+	@if $min {
+		@media screen and (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+/*
+ Include a media query with the maximum breakpoint width
+ */
+@mixin media-breakpoint-down($name) {
+	$max: breakpoint-max($name);
+	@warn "max `#{$max}`";
+	@if $max {
+		@media screen and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}

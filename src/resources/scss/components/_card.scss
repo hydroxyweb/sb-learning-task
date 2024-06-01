@@ -1,0 +1,27 @@
+@use '../functions/getters' as func;
+
+$top-border-radius: 30px;
+$bottom-border-radius: 10px;
+
+.card
+{
+	background-color: func.get-color(white);
+	border-radius: $top-border-radius $top-border-radius $bottom-border-radius $bottom-border-radius;
+	position: absolute;
+
+	&-primary
+	{
+		box-shadow: 0px 12px 24px 0px #006C951A;
+		width: 70%;
+		top: 30vh;
+		padding: 40px;
+		margin: auto;
+
+		@include media-breakpoint-up(lg) {
+			width: 80%;
+			top: 90vh;
+			left: 8%;
+			padding: 40px;
+		}
+	}
+}

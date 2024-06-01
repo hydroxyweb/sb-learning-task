@@ -4,4 +4,6 @@
         <x-button.hamburger/>
     </div>
     <div class="header__background"></div>
+    <div class="header__hero-image"></div>
 </header>
+<x-header-search/>

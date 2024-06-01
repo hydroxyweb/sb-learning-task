@@ -1,4 +1,47 @@
+@use '../functions/getters' as func;
+
 * {
 	font-family: "Poppins", sans-serif;
 	font-style: normal;
+}
+
+.text {
+	&-normal {
+		font-weight: normal;
+		font-size: unset;
+	}
+
+	&-primary {
+		color: func.get-color(primary);
+	}
+}
+
+.fw {
+	&-400 {
+		font-weight: 400;
+	}
+
+	&-500 {
+		font-weight: 500;
+	}
+
+	&-600 {
+		font-weight: 600;
+	}
+}
+
+.fs {
+	&-normal {
+		font-size: unset;
+	}
+
+	&-32 {
+		// TODO
+		font-size: 32px;
+	}
+
+	&-60 {
+		// TODO
+		font-size: 60px;
+	}
 }
