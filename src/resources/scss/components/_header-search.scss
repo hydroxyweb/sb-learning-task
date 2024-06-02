@@ -1,0 +1,94 @@
+@use '../functions/getters' as func;
+@use '../mixins' as mix;
+
+.header-search {
+
+	margin-top: 100vh;
+
+	&__primary-title,
+	&__secondary-title {
+		text-align: center;
+
+		@include mix.media-breakpoint-up(lg) {
+			text-align: left;
+		}
+	}
+
+	.icon {
+		font-size: 32px;
+	}
+
+	.button {
+
+		&--outlined {
+			text-align: left;
+
+			.icon {
+				color: func.get-color(muted);
+			}
+		}
+
+		&--primary {
+			font-size: 1.3rem;
+
+			.row {
+				flex-flow: row-reverse;
+			}
+
+			.icon {
+				color: func.get-color(white);
+			}
+		}
+	}
+
+	.card-primary {
+		padding-top: 20px;
+		padding-bottom: 10px;
+		top: 20vh;
+		@include mix.media-breakpoint-up(lg) {
+			top: 80vh;
+		}
+	}
+
+	&__buttons {
+		.button {
+			&--outlined {
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		@include mix.media-breakpoint-up(lg) {
+			padding: 10px;
+			width: 100%;
+
+			.button {
+
+				&--outlined {
+					border: 0;
+					background-color: transparent;
+					border-radius: 0;
+					height: 60px;
+					margin-bottom: 0;
+					width: 25%;
+
+					&:not(:first-child) {
+						border-left: 1px solid func.get-color(light-grey);
+					}
+				}
+
+				&--primary {
+					width: 60px;
+					height: 60px;
+					padding: 10px 5px 10px 0px;
+
+					strong {
+						display: none;
+					}
+				}
+			}
+
+			border: 1px solid func.get-color(light-grey);
+			border-radius: 72px;
+		}
+	}
+}

@@ -1,5 +1,17 @@
 .m {
+
 	&-0 {
 		margin: 0;
+	}
+
+	&-b {
+
+		&-sm {
+			margin-bottom: 0.2rem;
+		}
+
+		&-md {
+			margin-bottom: 0.5rem;
+		}
 	}
 }

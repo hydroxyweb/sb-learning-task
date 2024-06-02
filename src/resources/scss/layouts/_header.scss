@@ -1,8 +1,11 @@
 @use '../components/navigation';
 @use '../components/button/hamburger';
 @use '../functions/getters' as func;
-@import '../mixins/breakpoints';
-@import '../components/card';
+@use '../components/card';
+// Kérdés: Ezeket hogyan importáljuk??
+@use '../components/header-search';
+@use '../components/button/button';
+@use '../mixins' as mix;
 
 .header {
 	width: 100%;
@@ -15,7 +18,7 @@
 		justify-content: center;
 		height: 100%;
 
-		@include media-breakpoint-up(lg) {
+		@include mix.media-breakpoint-up(lg) {
 			justify-content: start;
 			align-items: start;
 		}
@@ -28,7 +31,7 @@
 		text-transform: uppercase;
 		z-index: 1;
 
-		@include media-breakpoint-up(lg) {
+		@include mix.media-breakpoint-up(lg) {
 			position: relative;
 			left: 10rem;
 			color: func.get-color(white);
@@ -45,8 +48,8 @@
 		top: 45px;
 		display: flex;
 
-		@include media-breakpoint-up(lg) {
-			height: 40vh;
+		@include mix.media-breakpoint-up(lg) {
+			height: 30vh;
 			top: 0;
 		}
 	}
@@ -59,8 +62,8 @@
 		background-position: bottom;
 		height: 35vh;
 
-		@include media-breakpoint-up(lg) {
-			height: 99vh;
+		@include mix.media-breakpoint-up(lg) {
+			height: 90vh;
 			background-size: cover;
 		}
 	}

@@ -6,6 +6,7 @@
 }
 
 .text {
+
 	&-normal {
 		font-weight: normal;
 		font-size: unset;
@@ -14,9 +15,26 @@
 	&-primary {
 		color: func.get-color(primary);
 	}
+
+	&-muted {
+		color: func.get-color(light-grey);
+	}
+
+	&-uppercase {
+		text-transform: uppercase;
+	}
+}
+
+.h1 {
+	font-size: 2em;
+}
+
+.h2 {
+	font-size: 1.2em;
 }
 
 .fw {
+
 	&-400 {
 		font-weight: 400;
 	}
@@ -28,20 +46,8 @@
 	&-600 {
 		font-weight: 600;
 	}
-}
 
-.fs {
-	&-normal {
-		font-size: unset;
-	}
-
-	&-32 {
-		// TODO
-		font-size: 32px;
-	}
-
-	&-60 {
-		// TODO
-		font-size: 60px;
+	&-700 {
+		font-weight: 700;
 	}
 }

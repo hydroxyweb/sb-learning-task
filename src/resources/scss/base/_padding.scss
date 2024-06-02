@@ -1,9 +1,27 @@
-.pt-sm {
-	padding-top: 0.5rem;
-}
-
 .p {
+
+	&-t {
+		&-sm {
+			padding-top: 0.5rem;
+		}
+
+		&-lg {
+			padding-top: 3rem;
+		}
+	}
+
 	&-0 {
 		padding: 0;
+	}
+
+	&-sm {
+		padding: 0.5rem;
+	}
+
+	&-r {
+
+		&-sm {
+			padding-right: 0.5rem;
+		}
 	}
 }

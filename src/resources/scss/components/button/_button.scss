@@ -1,0 +1,21 @@
+@use '../../functions/getters' as func;
+
+.button {
+	padding: 12px 12px 12px 24px;
+	border-radius: 72px;
+	height: 58px;
+	text-align: center;
+
+	&--outlined {
+		@extend .button;
+		border: 1px solid func.get-color(light-grey);
+		background-color: func.get-color(white);
+	}
+
+	&--primary {
+		@extend .button;
+		border: 1px solid func.get-color(primary);
+		background-color: func.get-color(primary);
+		color: func.get-color(white);
+	}
+}
