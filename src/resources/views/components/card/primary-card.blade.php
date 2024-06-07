@@ -1,3 +1,3 @@
-<div class="card card-primary">
+<div class="card card--primary">
     {{ $slot }}
 </div>

@@ -1,16 +1,16 @@
-<button class="button--{{ $color ?? 'primary' }}" role="button" aria-label="{{ $title }}">
+<button class="button button--{{ $color ?? 'primary' }}" role="button" aria-label="{{ $title }}">
     <div class="row">
         @if (isset($icon))
-            <div class="col-1 icon p-r-sm">
+            <div class="col col-1 button__icon button__icon--large p-r-sm">
                 {{ $icon }}
             </div>
         @endif
 
-        <div class="col--row">
+        <div class="col col--row p-l-md">
             @if (isset($title))
-                <strong>
+                <span class="button__title">
                     {{ $title }}
-                </strong>
+                </span>
             @endif
 
             @if (isset($secondary))

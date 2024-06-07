@@ -1,10 +1,5 @@
-@use '../components/navigation';
-@use '../components/button/hamburger';
 @use '../functions/getters' as func;
-@use '../components/card';
-// Kérdés: Ezeket hogyan importáljuk??
-@use '../components/header-search';
-@use '../components/button/button';
+
 @use '../mixins' as mix;
 
 .header {

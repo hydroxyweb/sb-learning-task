@@ -7,15 +7,19 @@
 	text-align: center;
 
 	&--outlined {
-		@extend .button;
 		border: 1px solid func.get-color(light-grey);
 		background-color: func.get-color(white);
 	}
 
 	&--primary {
-		@extend .button;
 		border: 1px solid func.get-color(primary);
 		background-color: func.get-color(primary);
 		color: func.get-color(white);
+	}
+
+	&__icon {
+		&--large {
+			width: 32px;
+		}
 	}
 }

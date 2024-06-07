@@ -5,8 +5,11 @@
 	flex-direction: row;
 
 	&--fluid {
-		@extend .row;
 		width: 100%;
+	}
+
+	&--reverse {
+		flex-flow: row-reverse;
 	}
 }
 
@@ -21,22 +24,18 @@
 	}
 
 	&-1 {
-		@extend .col;
 		width: 1em;
 	}
 
 	&-2 {
-		@extend .col;
 		width: 2em;
 	}
 
 	&-3 {
-		@extend .col;
 		width: 3em;
 	}
 
 	&--row {
-		@extend .col;
 		@include mix.media-breakpoint-up(lg) {
 			flex-direction: column;
 		}

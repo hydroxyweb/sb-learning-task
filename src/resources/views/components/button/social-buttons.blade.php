@@ -1,14 +1,15 @@
-<div class="social__buttons">
+<div class="social-buttons">
+    <p class="social-buttons__title">follow us</p>
     <a>
-        <i class="icon-facebook"></i>
+        <i class="social-buttons__icon icon-facebook"></i>
     </a>
     <a>
-        <i class="icon-twitter"></i>
+        <i class="social-buttons__icon icon-twitter"></i>
     </a>
     <a>
-        <i class="icon-tiktok"></i>
+        <i class="social-buttons__icon icon-tiktok"></i>
     </a>
     <a>
-        <i class="icon-youtube"></i>
+        <i class="social-buttons__icon icon-youtube"></i>
     </a>
 </div>

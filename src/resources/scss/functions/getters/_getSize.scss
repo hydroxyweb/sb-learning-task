@@ -1,0 +1,12 @@
+@use '../../config/size' as conf;
+@use '../common/getValue' as func;
+
+/**
+ * It's a special getter for size,that get the value from map.
+ *
+ * @param {Value} $breakpoint - breakpoint  value.
+ */
+
+@function get-size($breakpoint) {
+	@return func.get-value(conf.$size, $breakpoint);
+}

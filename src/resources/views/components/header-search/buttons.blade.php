@@ -2,7 +2,7 @@
     <div class="col header-search__buttons">
         <x-button.button color="outlined">
             <x-slot name="icon">
-                <i class="icon-location"></i>
+                <i class="icon-location icon icon--muted icon--large"></i>
             </x-slot>
             <x-slot name="title">
                 Location
@@ -14,7 +14,7 @@
 
         <x-button.button color="outlined">
             <x-slot name="icon">
-                <i class="icon-calendar"></i>
+                <i class="icon-calendar icon icon--muted icon--large"></i>
             </x-slot>
             <x-slot name="title">
                 Check in
@@ -26,7 +26,7 @@
 
         <x-button.button color="outlined">
             <x-slot name="icon">
-                <i class="icon-calendar"></i>
+                <i class="icon-calendar icon icon--muted icon--large"></i>
             </x-slot>
             <x-slot name="title">
                 Check out
@@ -38,7 +38,7 @@
 
         <x-button.button color="outlined">
             <x-slot name="icon">
-                <i class="icon-users"></i>
+                <i class="icon-users icon icon--muted icon--large"></i>
             </x-slot>
             <x-slot name="title">
                 Guests
@@ -50,7 +50,7 @@
 
         <x-button.button>
             <x-slot name="icon">
-                <i class="icon-search"></i>
+                <i class="icon-search icon icon--white icon--large"></i>
             </x-slot>
             <x-slot name="title">
                 Search

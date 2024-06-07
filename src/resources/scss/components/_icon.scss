@@ -1,0 +1,15 @@
+@use '../functions/getters' as func;
+
+.icon {
+	&--large {
+		font-size: 32px;
+	}
+
+	&--muted {
+		color: func.get-color(muted);
+	}
+
+	&--white {
+		color: func.get-color(white);
+	}
+}

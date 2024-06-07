@@ -1,2 +1,9 @@
 @use 'base';
 @use 'layouts';
+@import 'components/button/button';
+@import 'components/card';
+@import 'components/navigation';
+@import 'components/button/hamburger';
+@import 'components/icon';
+@import 'pages/home-page';
+@import 'normalize.css/normalize.css';

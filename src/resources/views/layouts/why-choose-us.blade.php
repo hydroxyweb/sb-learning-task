@@ -1,4 +1,4 @@
-<div class="row--fluid p-t-lg choose-us">
+<div class="row ow--fluid p-t-lg choose-us">
     <div class="col--row text-center">
         <p class="h1 text-uppercase fw-700">Why choose us?</p>
         <div class="row">

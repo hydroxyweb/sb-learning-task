@@ -3,7 +3,7 @@
 
 .header-search {
 
-	margin-top: 100vh;
+	margin-top: 10vh;
 
 	&__primary-title,
 	&__secondary-title {
@@ -14,37 +14,29 @@
 		}
 	}
 
-	.icon {
-		font-size: 32px;
-	}
-
 	.button {
-
 		&--outlined {
 			text-align: left;
-
-			.icon {
-				color: func.get-color(muted);
-			}
 		}
 
 		&--primary {
 			font-size: 1.3rem;
 
-			.row {
-				flex-flow: row-reverse;
+			.button__title {
+				@include mix.media-breakpoint-up(lg) {
+					display: none;
+				}
 			}
 
-			.icon {
-				color: func.get-color(white);
-			}
 		}
 	}
 
-	.card-primary {
+	.card--primary {
 		padding-top: 20px;
 		padding-bottom: 10px;
 		top: 20vh;
+		display: flex;
+		flex-direction: column;
 		@include mix.media-breakpoint-up(lg) {
 			top: 80vh;
 		}
@@ -80,10 +72,6 @@
 					width: 60px;
 					height: 60px;
 					padding: 10px 5px 10px 0px;
-
-					strong {
-						display: none;
-					}
 				}
 			}
 

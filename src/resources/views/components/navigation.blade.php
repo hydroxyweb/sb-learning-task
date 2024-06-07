@@ -8,7 +8,6 @@
     @endforeach
     </ul>
     <div class="navigation__bottom">
-        <p class="social__buttons-title">follow us</p>
         <x-button.social-buttons/>
     </div>
 </nav>
