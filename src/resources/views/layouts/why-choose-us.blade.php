@@ -1,36 +1,45 @@
-<div class="row ow--fluid p-t-lg choose-us">
-    <div class="col--row text-center">
-        <p class="h1 text-uppercase fw-700">Why choose us?</p>
-        <div class="row">
-            <div class="col--row">
+<div class="choose-us section">
+    <div class="row row--fluid">
+        <div class="text-center">
+            <p class="section__title choose-us__title">Why choose us?</p>
+            <div class="row row--col-xs">
+                <div class="col">
 
-                <p class="icon-coin-dollar"></p>
-                <strong>Competitive Prices</strong>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                </p>
+                    <p class="choose-us__icon icon-coin-dollar"></p>
+                    <p class="section__subtitle">
+                        Competitive Prices
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    </p>
 
-            </div>
+                </div>
 
-            <div class="col--row">
+                <div class="col">
 
-                <p class="icon-security"></p>
-                <strong>Secure booking</strong>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                </p>
+                    <p class="choose-us__icon icon-security"></p>
+                    <p class="section__subtitle">
+                        Secure booking
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    </p>
 
-            </div>
+                </div>
 
-            <div class="col--row">
+                <div class="col">
 
-                <p class="icon-refresh"></p>
+                    <p class="choose-us__icon icon-refresh"></p>
 
-                <strong>Seamless Experience</strong>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                </p>
+                    <p class="section__subtitle">
+                        Seamless Experience
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+

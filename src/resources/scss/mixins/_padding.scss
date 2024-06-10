@@ -1,0 +1,29 @@
+@use 'spacer' as mix;
+@mixin padding($direction: all, $size: md, $multiplier: 1) {
+	@if $direction == all {
+		@include mix.spacer(padding, $size, $multiplier);
+	}
+	@else if $direction == left {
+		@include mix.spacer(padding-left, $size, $multiplier);
+	}
+	@else if $direction == right {
+		@include mix.spacer(padding-right, $size, $multiplier);
+	}
+	@else if $direction == top {
+		@include mix.spacer(padding-top, $size, $multiplier);
+	} @else if $direction == bottom {
+		@include mix.spacer(padding-bottom, $size, $multiplier);
+	}
+	@else if $direction == x {
+		@include mix.spacer(padding-left, $size, $multiplier);
+		@include mix.spacer(padding-right, $size, $multiplier);
+	}
+	@else if $direction == y {
+		@include mix.spacer(padding-top, $size, $multiplier);
+		@include mix.spacer(padding-bottom, $size, $multiplier);
+	}
+	@else if ($direction == none) {
+		@include mix.spacer(padding, none);
+	}
+}
+

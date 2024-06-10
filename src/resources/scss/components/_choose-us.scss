@@ -1,0 +1,40 @@
+@use '../mixins' as mix;
+@use '../functions/getters' as func;
+.choose-us
+{
+	// TODO
+	margin-top: 100vh;
+
+	@include mix.media-breakpoint-up(lg) {
+		margin-top: 110vh;
+	}
+
+	&__title {
+		@include mix.margin(y, 4xl);
+	}
+
+	.col {
+
+		@include mix.margin(y, xl);
+		@include mix.padding(x, 4xl);
+
+		@include mix.media-breakpoint-up(lg) {
+
+		}
+	}
+
+	&__icon {
+		@include mix.padding(all, md);
+		width: 80px;
+		height: 80px;
+		background-color: func.get-color(light-primary);
+		color: func.get-color(primary);
+		font-size: 40px;
+		border-radius: 16px;
+		margin: 0px auto 20px auto;
+
+		@include mix.media-breakpoint-up(lg) {
+
+		}
+	}
+}

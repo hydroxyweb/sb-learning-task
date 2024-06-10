@@ -1,5 +1,4 @@
 @use '../functions/getters' as func;
-
 @use '../mixins' as mix;
 
 .header {
@@ -16,6 +15,7 @@
 		@include mix.media-breakpoint-up(lg) {
 			justify-content: start;
 			align-items: start;
+			@include mix.padding(all, md);
 		}
 	}
 
@@ -25,12 +25,13 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		z-index: 1;
+		@include mix.padding(y, md);
 
 		@include mix.media-breakpoint-up(lg) {
 			position: relative;
 			left: 10rem;
 			color: func.get-color(white);
-			margin-top: 10px;
+			@include mix.margin(top, xs);
 		}
 	}
 

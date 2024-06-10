@@ -3,7 +3,7 @@
 @include('layouts.head')
 <body>
 @include('layouts.header')
-@include('layouts.header-search')
-@include('layouts.why-choose-us')
+@include('pages.index')
+@include('layouts.footer')
 </body>
 </html>

@@ -11,6 +11,12 @@
 	&--reverse {
 		flex-flow: row-reverse;
 	}
+
+	&--col-xs {
+		@include mix.media-breakpoint-down(lg) {
+			flex-direction: column;
+		}
+	}
 }
 
 .col {
@@ -20,7 +26,6 @@
 
 	@include mix.media-breakpoint-up(lg) {
 		width: unset;
-		flex-direction: row;
 	}
 
 	&-1 {
@@ -35,9 +40,7 @@
 		width: 3em;
 	}
 
-	&--row {
-		@include mix.media-breakpoint-up(lg) {
-			flex-direction: column;
-		}
+	&--in-button {
+		@include mix.padding(padding-left, md);
 	}
 }

@@ -1,5 +1,6 @@
 @use '../functions/getters' as func;
 @use './button/social-buttons';
+@use '../mixins' as mix;
 
 .navigation {
 	position: absolute;
@@ -15,15 +16,8 @@
 	transform: translateX(110%);
 	z-index: 0;
 
-	@media screen and (min-width: func.get-breakpoint(lg)) {
+	@include mix.media-breakpoint-up(lg){
 		left: 30%;
-	}
-
-	@media screen and (min-width: func.get-breakpoint(xl)) {
-		left: 50%;
-	}
-
-	@media screen and (min-width: func.get-breakpoint(lg)) {
 		transform: unset;
 		width: 100%;
 		height: unset;
@@ -47,6 +41,10 @@
 		.header__logo {
 			display: none;
 		}
+	}
+
+	@include mix.media-breakpoint-up(xl) {
+		left: 50%;
 	}
 
 	&::before {

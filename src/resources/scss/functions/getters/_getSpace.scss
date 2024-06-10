@@ -1,0 +1,13 @@
+@use '../../config/spaces' as conf;
+@use '../common/getValue' as func;
+
+/**
+ * It's a special getter for size,that get the value from map.
+ *
+ * @param {Value} $size - size  value.
+ * @param {Value} $multiplier - multiplier value
+ */
+
+@function get-space($size, $multiplier: 1) {
+	@return func.get-value(conf.$spaces, $size) * $multiplier;
+}

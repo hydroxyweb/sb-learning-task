@@ -32,8 +32,9 @@
 	}
 
 	.card--primary {
-		padding-top: 20px;
-		padding-bottom: 10px;
+		@include mix.padding(top, md);
+		@include mix.padding(bottom, xs);
+
 		top: 20vh;
 		display: flex;
 		flex-direction: column;
@@ -43,9 +44,21 @@
 	}
 
 	&__buttons {
+
+		display: flex;
+		flex-direction: column;
+
+		@include mix.media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+
 		.button {
 			&--outlined {
-				margin-bottom: 0.5rem;
+				@include mix.margin(bottom, md);
+			}
+
+			&__icon {
+				@include mix.margin(right, xs);
 			}
 		}
 

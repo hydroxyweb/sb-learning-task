@@ -1,0 +1,29 @@
+@use 'spacer' as mix;
+@mixin margin($direction: all, $size: md, $multiplier: 1) {
+	@if $direction == all {
+		@include mix.spacer(margin, $size, $multiplier);
+	}
+	@else if $direction == left {
+		@include mix.spacer(margin-left, $size, $multiplier);
+	}
+	@else if $direction == right {
+		@include mix.spacer(margin-right, $size, $multiplier);
+	}
+	@else if $direction == top {
+		@include mix.spacer(margin-top, $size, $multiplier);
+	} @else if $direction == bottom {
+		@include mix.spacer(margin-bottom, $size, $multiplier);
+	}
+	@else if $direction == x {
+		@include mix.spacer(margin-left, $size, $multiplier);
+		@include mix.spacer(margin-right, $size, $multiplier);
+	}
+	@else if $direction == y {
+		@include mix.spacer(margin-top, $size, $multiplier);
+		@include mix.spacer(margin-bottom, $size, $multiplier);
+	}
+	@else if ($direction == none) {
+		@include mix.spacer(margin, none);
+	}
+}
+

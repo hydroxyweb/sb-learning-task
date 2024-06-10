@@ -1,4 +1,5 @@
 @use '../../functions/getters' as func;
+@use '../../mixins' as mix;
 
 .button {
 	padding: 12px 12px 12px 24px;
@@ -15,11 +16,23 @@
 		border: 1px solid func.get-color(primary);
 		background-color: func.get-color(primary);
 		color: func.get-color(white);
+
+		.button__title {
+			@include mix.padding(all, xxs);
+			@include mix.media-breakpoint-up(lg) {
+				@include mix.padding(all, none);
+			}
+		}
 	}
 
 	&__icon {
 		&--large {
 			width: 32px;
+		}
+
+		&--centered {
+			@include mix.padding(y, none);
+			@include mix.padding(x, xs);
 		}
 	}
 }

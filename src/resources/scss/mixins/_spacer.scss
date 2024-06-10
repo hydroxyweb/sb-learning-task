@@ -1,0 +1,4 @@
+@use '../functions/getters' as func;
+@mixin spacer($attribute, $size, $multiplier) {
+	#{$attribute}: func.get-space($size, $multiplier);
+}

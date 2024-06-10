@@ -1,4 +1,5 @@
 @use '../../functions/getters' as func;
+@use '../../mixins' as mix;
 
 $social-button-size: 28px;
 
@@ -9,6 +10,12 @@ $social-button-size: 28px;
 	gap: 0.5rem;
 	align-content: center;
 	align-items: center;
+
+	&--navigation {
+		@include mix.media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
 
 	&__icon {
 		color: func.get-color(white);
