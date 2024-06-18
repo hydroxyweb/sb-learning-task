@@ -5,6 +5,10 @@
 
 	margin-top: 10vh;
 
+	&__primary-title {
+		@include mix.weight(semi-bold);
+	}
+
 	&__primary-title,
 	&__secondary-title {
 		text-align: center;

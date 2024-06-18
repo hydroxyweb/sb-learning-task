@@ -31,7 +31,8 @@
 			position: relative;
 			left: 10rem;
 			color: func.get-color(white);
-			@include mix.margin(top, xs);
+			@include mix.margin(y, none);
+			@include mix.padding(y, none);
 		}
 	}
 

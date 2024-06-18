@@ -1,0 +1,6 @@
+@use '../../config/weights' as conf;
+@use '../common/getValue' as func;
+
+@function get-weight($weight) {
+	@return func.get-value(conf.$weights, $weight);
+}

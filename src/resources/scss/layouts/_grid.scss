@@ -24,10 +24,6 @@
 	flex-direction: column;
 	width: 100%;
 
-	@include mix.media-breakpoint-up(lg) {
-		width: unset;
-	}
-
 	&-1 {
 		width: 1em;
 	}

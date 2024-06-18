@@ -44,27 +44,8 @@
 	&__subtitle {
 		font-weight: 700;
 		font-size: 20px;
-		@include mix.margin(y, md);
+		@include mix.margin(top, 4xl);
+		@include mix.margin(bottom, md);
 	}
 }
-
-.fw {
-
-	&-400 {
-		font-weight: 400;
-	}
-
-	&-500 {
-		font-weight: 500;
-	}
-
-	&-600 {
-		font-weight: 600;
-	}
-
-	&-700 {
-		font-weight: 700;
-	}
-}
-
 // helperek vagy inkább config mapok!

@@ -1,0 +1,4 @@
+@use '../functions/getters' as func;
+@mixin weight($weight) {
+	font-weight: func.get-weight($weight);
+}

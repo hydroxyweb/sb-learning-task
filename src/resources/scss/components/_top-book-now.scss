@@ -1,0 +1,25 @@
+@use '../mixins' as mix;
+
+.top-book-now
+{
+	margin: auto;
+	max-width: 80vw;
+	@include mix.padding(bottom, xl);
+
+	&__row {
+		justify-content: center;
+	}
+
+	&__title {
+		@include mix.margin(y, 4xl, 2);
+	}
+
+	&__item {
+		@include mix.margin(x, 4xl);
+	}
+
+	&__col {
+		width: 75vw;
+		height: 250px;
+	}
+}
