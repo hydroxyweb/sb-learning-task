@@ -1,4 +1,5 @@
 @use '../mixins' as mix;
+@use '../functions/getters' as func;
 
 .top-book-now
 {
@@ -8,6 +9,18 @@
 
 	&__row {
 		justify-content: center;
+		flex: 1;
+
+		&--grid {
+			@include mix.media-breakpoint-up(lg) {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+
+		&::after {
+			clear: both;
+		}
 	}
 
 	&__title {
@@ -20,6 +33,60 @@
 
 	&__col {
 		width: 75vw;
-		height: 250px;
+		min-width: 75vw;
+		@include mix.margin(bottom, md);
+
+		@include mix.media-breakpoint-up(lg) {
+			width: 250px;
+			min-width: 250px;
+		}
+	}
+
+	&__rating {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		background-color: func.get-color(black, 0.5);
+		color: func.get-color(white);
+		font-size: 12px;
+		@include mix.padding(all, xs);
+		border-radius: 8px;
+
+		&__star {
+			color: func.get-color(star);
+			@include mix.padding(right, xxs);
+		}
+
+		&__score {
+			@include mix.weight(bold);
+		}
+	}
+
+	&__accommodation-name,
+	&__price
+	{
+		@include mix.weight(bold);
+	}
+
+	&__price {
+		text-align: right;
+	}
+
+	&__location {
+		color: func.get-color(muted);
+		font-size: 12px;
+		@include mix.weight(regular);
+	}
+
+	&__image-container {
+		height: 260px;
+	}
+
+	&__accommodation-name {
+		width: 70%;
+	}
+
+	&__price {
+		width: 30%;
 	}
 }

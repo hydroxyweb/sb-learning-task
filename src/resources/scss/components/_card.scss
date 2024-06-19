@@ -11,9 +11,9 @@ $bottom-border-radius: 32px;
 
 .card
 {
+	position: absolute;
 	background-color: func.get-color(white);
 	border-radius: $top-border-radius $top-border-radius $bottom-border-radius $bottom-border-radius;
-	position: absolute;
 
 	&--primary
 	{
