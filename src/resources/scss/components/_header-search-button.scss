@@ -24,10 +24,12 @@
 		border: 1px solid func.get-color(primary);
 		background-color: func.get-color(primary);
 		color: func.get-color(white);
+		@include mix.margin(top, xxs);
 
 		@include mix.media-breakpoint-up(lg) {
 			width: 58px;
 			@include mix.padding(all, xxs);
+			@include mix.margin(top, none);
 		}
 	}
 
