@@ -18,24 +18,7 @@
 		}
 	}
 
-	.button {
-		&--outlined {
-			text-align: left;
-		}
-
-		&--primary {
-			font-size: 1.3rem;
-
-			.button__title {
-				@include mix.media-breakpoint-up(lg) {
-					display: none;
-				}
-			}
-
-		}
-	}
-
-	.card--primary {
+	&__card {
 		@include mix.padding(top, md);
 		@include mix.padding(bottom, xs);
 
@@ -48,7 +31,6 @@
 	}
 
 	&__buttons {
-
 		display: flex;
 		flex-direction: column;
 
@@ -56,44 +38,21 @@
 			flex-direction: row;
 		}
 
-		.button {
-			&--outlined {
-				@include mix.margin(bottom, md);
-			}
-
-			&__icon {
-				@include mix.margin(right, xs);
-			}
-		}
-
 		@include mix.media-breakpoint-up(lg) {
-			padding: 10px;
+			@include mix.padding(all, xs);
 			width: 100%;
-
-			.button {
-
-				&--outlined {
-					border: 0;
-					background-color: transparent;
-					border-radius: 0;
-					height: 60px;
-					margin-bottom: 0;
-					width: 25%;
-
-					&:not(:first-child) {
-						border-left: 1px solid func.get-color(light-grey);
-					}
-				}
-
-				&--primary {
-					width: 60px;
-					height: 60px;
-					padding: 10px 5px 10px 0px;
-				}
-			}
-
 			border: 1px solid func.get-color(light-grey);
 			border-radius: 72px;
+		}
+	}
+
+	&__separator {
+		display: none;
+		@include mix.media-breakpoint-up(lg) {
+			height: 40px;
+			@include mix.margin(top, xs);
+			border-right: 1px solid func.get-color(muted);
+			display: flex;
 		}
 	}
 }

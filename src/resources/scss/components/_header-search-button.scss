@@ -1,0 +1,53 @@
+@use '../functions/getters' as func;
+@use '../mixins' as mix;
+
+.header-search-button {
+	&--outlined {
+		text-align: left;
+		border: 1px solid func.get-color(light-grey);
+		background-color: func.get-color(white);
+		@include mix.margin(y, xs);
+
+		@include mix.media-breakpoint-up(lg) {
+			border: 0;
+			background-color: transparent;
+			border-radius: 0;
+			height: 60px;
+			margin-bottom: 0;
+			width: 25%;
+			@include mix.margin(y, none);
+		}
+	}
+
+	&--search {
+		font-size: 1.3rem;
+		border: 1px solid func.get-color(primary);
+		background-color: func.get-color(primary);
+		color: func.get-color(white);
+
+		@include mix.media-breakpoint-up(lg) {
+			width: 58px;
+			@include mix.padding(all, xxs);
+		}
+	}
+
+	&__primary-title {
+
+		&--search {
+			@include mix.media-breakpoint-up(lg) {
+				display: none;
+			}
+		}
+
+		&--outlined {
+			@include mix.weight(bold);
+		}
+	}
+
+	&__icon {
+		@include mix.margin(right, xxs);
+		@include mix.media-breakpoint-up(lg) {
+			@include mix.padding(top, xxs);
+		}
+	}
+}
